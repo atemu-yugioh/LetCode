@@ -1,4 +1,6 @@
-const output = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]];
+// !!! Link description: https://leetcode.com/problems/pascals-triangle/description/
+
+//const output = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]];
 
 // i: 1 -> 5
 // output[i=1] = [1]
