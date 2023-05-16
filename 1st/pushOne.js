@@ -2,18 +2,18 @@
 // Space Complexity: O(n)
 // mảng quá nhiều phần tử => số covert quá lớn => phải dùng BigInt
 var plusOne = function (digits) {
-  var intergerDigits = BigInt(0);
+  var integerDigits = BigInt(0);
   let result = [];
   for (const number of digits) {
-    intergerDigits = BigInt(intergerDigits) * BigInt(10) + BigInt(number);
+    integerDigits = BigInt(integerDigits) * BigInt(10) + BigInt(number);
   }
 
-  intergerDigits = intergerDigits + BigInt(1);
+  integerDigits = integerDigits + BigInt(1);
 
-  intergerDigits = intergerDigits.toString();
+  integerDigits = integerDigits.toString();
 
-  for (let i = 0; i < intergerDigits.length; i++) {
-    result.push(parseInt(intergerDigits[i]));
+  for (let i = 0; i < integerDigits.length; i++) {
+    result.push(parseInt(integerDigits[i]));
   }
 
   return result;
