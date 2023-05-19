@@ -17,7 +17,27 @@ const insertLastList = (value, head = null) => {
   return head;
 };
 
+const insertTheNodeK = (value, k, head) => {
+  let dummy = new ListNode(0, head);
+  let temp = dummy;
+  let newNode = new ListNode(value);
+
+  if (head.nextNode === null && k === 1) {
+    return (head.nextNode = newNode);
+  }
+
+  for (let index = 0; index <= k - 1; index++) {
+    temp = temp.nextNode;
+  }
+
+  newNode.nextNode = temp.nextNode;
+  temp.nextNode = newNode;
+
+  return dummy.nextNode;
+};
+
 module.exports = {
   insertFistList,
   insertLastList,
+  insertTheNodeK,
 };
