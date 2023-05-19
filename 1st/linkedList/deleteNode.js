@@ -14,6 +14,10 @@ const deleteLastNode = (head) => {
   let dummy = new ListNode(0, head);
   let temp = dummy;
 
+  if (head === null || head.nextNode === null) {
+    return null;
+  }
+
   while (temp.nextNode.nextNode !== null) {
     // nếu cái thằng đứng sau nó mả trỏ tới null thì có nghĩa là nó là thằng kế cuối
     temp = temp.nextNode; // mà nó đã là thằng kế cuối thì không cần dời qua phải để làm gì nữa, vì mục đích là tìm ra thằng đứng kết thằng cuối
@@ -28,6 +32,10 @@ const deleteLastNode = (head) => {
 const deleteTheNodeK = (k, head) => {
   let dummy = new ListNode(0, head);
   let temp = dummy;
+
+  if (head === null || head.nextNode === null) {
+    return null;
+  }
 
   for (let index = 0; index <= k - 1; index++) {
     temp = temp.nextNode;
