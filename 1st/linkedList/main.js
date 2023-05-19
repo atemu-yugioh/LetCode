@@ -4,7 +4,7 @@ const {
   deleteTheNodeK,
 } = require("./deleteNode");
 const { generate } = require("./generate");
-const { insertFistList } = require("./insertNode");
+const { insertFistList, insertLastList } = require("./insertNode");
 const { showListNode } = require("./show");
 
 const initListNode = (length) => {
@@ -37,8 +37,15 @@ const testInsertFirstNode = (value, head) => {
   return newListNode;
 };
 
+const testInsertLastNode = (value, head) => {
+  let newListNode = insertLastList(value, head);
+  showListNode(newListNode);
+  return newListNode;
+};
+
 let node = initListNode(10);
 testInsertFirstNode(0, node);
+testInsertLastNode(11, node);
 testDeleteFirstNode(node);
 testDeleteLastNode(node);
 testDeleteNodeK(5, node);
