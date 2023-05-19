@@ -1,4 +1,8 @@
-const { deleteFirstNode, deleteLastNode } = require("./deleteNode");
+const {
+  deleteFirstNode,
+  deleteLastNode,
+  deleteTheNodeK,
+} = require("./deleteNode");
 const { generate } = require("./generate");
 const { showListNode } = require("./show");
 
@@ -20,6 +24,13 @@ const testDeleteLastNode = (head) => {
   return newListNode;
 };
 
+const testDeleteNodeK = (k, head) => {
+  let newListNode = deleteTheNodeK(k, head);
+  showListNode(newListNode);
+  return newListNode;
+};
+
 let node = initListNode(10);
-node = testDeleteFirstNode(node);
-node = testDeleteLastNode(node);
+testDeleteFirstNode(node);
+testDeleteLastNode(node);
+testDeleteNodeK(5, node);

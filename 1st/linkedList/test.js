@@ -115,12 +115,12 @@ const deleteTheKNode = (k, head) => {
 
   for (let index = 0; index <= k - 1; index++) {
     // thoát khỏi vòng lặp thì temp sẽ là node đứng trước node cần xóa
-    temp = temp.next;
+    temp = temp.nextNode;
   }
 
-  temp.next = temp.next.next;
+  temp.nextNode = temp.nextNode.nextNode;
 
-  return dummy.next;
+  return dummy.nextNode;
 };
 
 const reverseList = (head) => {

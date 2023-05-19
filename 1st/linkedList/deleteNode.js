@@ -25,7 +25,21 @@ const deleteLastNode = (head) => {
   return dummy.nextNode;
 };
 
+const deleteTheNodeK = (k, head) => {
+  let dummy = new ListNode(0, head);
+  let temp = dummy;
+
+  for (let index = 0; index <= k - 1; index++) {
+    temp = temp.nextNode;
+  }
+
+  temp.nextNode = temp.nextNode.nextNode;
+
+  return dummy.nextNode;
+};
+
 module.exports = {
   deleteFirstNode,
   deleteLastNode,
+  deleteTheNodeK,
 };
