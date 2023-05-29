@@ -32,6 +32,10 @@ class StackArray {
       console.log(this.stack);
     }
   }
+
+  size() {
+    return this.stack.length;
+  }
 }
 
 module.exports = StackArray;

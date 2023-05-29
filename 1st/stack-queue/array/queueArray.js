@@ -37,6 +37,11 @@ class QueueArray {
       console.log(this.queue);
     }
   }
+
+  // size
+  size() {
+    return this.queue.length;
+  }
 }
 
 module.exports = QueueArray;
